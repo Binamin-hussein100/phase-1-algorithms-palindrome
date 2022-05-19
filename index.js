@@ -1,9 +1,25 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  var len = word.length
+  var mid = Math.floor(len/2)
+  console.log(mid)
+  for (i=0; i < mid;i++){
+    if(word[1] !== word[len-1 -i]){
+      return false
+    }else if(len === 1){
+      return true
+    }
+    else if(len === 2){
+      return false
+    }else{
+      true
+    }
+  }
 }
 
 /* 
   Add your pseudocode here
+
 */
 
 /*
@@ -20,6 +36,9 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: true")
+  console.log(" =>",isPalindrome("a"))
 }
 
 module.exports = isPalindrome;
